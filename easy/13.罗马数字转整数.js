@@ -69,7 +69,35 @@
  * @param {string} s
  * @return {number}
  */
-var romanToInt = function (s) {
-  // V (5) 和 X (10) L (50) 和 C (100) D (500) 和 M (1000)
+var romanToInt = function(s) {
+  const re = {
+    I: 1,
+    V: 5,
+    X: 10,
+    L: 50,
+    C: 100,
+    D: 500,
+    M: 1000,
+    IV: 4,
+    IX: 9,
+    XL: 40,
+    XC: 90,
+    CD: 400,
+    DM: 500,
+    CM: 900,
+  }
+  if (re.length === 1) return re[s];
+  let sum = 0;
+  console.log(123);
+  for (let i = 0; i < s.length;) {
+    if (re[s.substr(i, 2)]) {
+      sum += re[s.substr(i, 2)];
+      i += 2;
+    } else {
+      sum += re[s[i]];
+      i += 1;
+    }
+  }
+  return sum;
 };
 

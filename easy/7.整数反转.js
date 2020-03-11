@@ -43,8 +43,10 @@
  */
 var reverse = function (x) {
   // const nums = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
-  let x = x.toString();
-  Array.prototype.reverse.call(x);
-  return x;
+  // const y = x.toString();
+  // Array.prototype.reverse.call(y);
+  // return y;
+  const y = Math.abs(x).toString();
+  
 };
 
